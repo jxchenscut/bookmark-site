@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>网站导航</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+    }
+    
+    body {
+      background-color: #f5f5f5;
+      color: #333;
+      padding: 20px;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    header {
+      text-align: center;
+      margin-bottom: 30px;
+      padding: 20px 0;
+    }
+    
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      color: #2c3e50;
+    }
+    
+    .description {
+      color: #7f8c8d;
+      margin-bottom: 20px;
+    }
+    
+    .search-box {
+      max-width: 600px;
+      margin: 0 auto 30px;
+      position: relative;
+    }
+    
+    .search-box input {
+      width: 100%;
+      padding: 12px 20px;
+      border: 2px solid #ddd;
+      border-radius: 30px;
+      font-size: 16px;
+      outline: none;
+      transition: all 0.3s;
+    }
+    
+    .search-box input:focus {
+      border-color: #3498db;
+      box-shadow: 0 0 8px rgba(52, 152, 219, 0.5);
+    }
+    
+    .categories {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: space-around;
+    }
+    
+    .category {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      width: 100%;
+      max-width: 350px;
+      margin-bottom: 30px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    
+    .category:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    }
+    
+    .category h2 {
+      color: #2c3e50;
+      padding-bottom: 10px;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #f0f0f0;
+      font-size: 1.5rem;
+    }
+    
+    .links {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+    }
+    
+    .link-item {
+      text-decoration: none;
+      color: #34495e;
+      padding: 8px 5px;
+      border-radius: 5px;
+      transition: all 0.2s;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+    }
+    
+    .link-item:hover {
+      background-color: #f8f9fa;
+      color: #3498db;
+    }
+    
+    .link-item i {
+      margin-right: 8px;
+      font-size: 18px;
+    }
+    
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      padding: 20px 0;
+      color: #7f8c8d;
+      font-size: 14px;
+    }
+    
+    @media (max-width: 768px) {
+      .categories {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .category {
+        max-width: 100%;
+      }
+      
+      .links {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>网站导航</h1>
+      <p class="description">精选实用网站导航，一站直达你需要的服务</p>
+      <div class="search-box">
+        <input type="text" id="search" placeholder="搜索网站..." onkeyup="searchSites()">
+      </div>
+    </header>
+    
+    <div class="categories">
+      <!-- AI工具 -->
+      <div class="category">
+        <h2>AI工具</h2>
+        <div class="links">
+          <a href="https://chatgpt.com/" class="link-item" target="_blank"><i class="fas fa-robot"></i>ChatGPT</a>
+          <a href="https://claude.ai/login?returnTo=/?" class="link-item" target="_blank"><i class="fas fa-comment-dots"></i>Claude</a>
+          <a href="https://kimi.moonshot.cn/" class="link-item" target="_blank"><i class="fas fa-brain"></i>Kimi</a>
+          <a href="https://tongyi.aliyun.com/qianwen/?spm=5176.28326591.0.0.40f76ee1zBYunq" class="link-item" target="_blank"><i class="fas fa-comment"></i>通义千问</a>
+          <a href="https://yuanbao.tencent.com/chat/naQivTmsDa" class="link-item" target="_blank"><i class="fas fa-comment-alt"></i>腾讯元宝</a>
+          <a href="https://www.doubao.com/chat/?channel=bing_sem&source=dbweb_bing_sem_xhs_pc_01&keywordid=1&msclkid=3d7a9114a25918fd899cf6475ff75644" class="link-item" target="_blank"><i class="fas fa-comment-dots"></i>豆包</a>
+          <a href="https://chat.deepseek.com/sign_in" class="link-item" target="_blank"><i class="fas fa-search"></i>DeepSeek</a>
+          <a href="https://bot.n.cn/" class="link-item" target="_blank"><i class="fas fa-robot"></i>纳米AI</a>
+          <a href="https://chatglm.cn/main/alltoolsdetail?lang=zh" class="link-item" target="_blank"><i class="fas fa-brain"></i>智谱沉思</a>
+          <a href="https://www.toolify.ai/zh/" class="link-item" target="_blank"><i class="fas fa-tools"></i>Toolify</a>
+        </div>
+      </div>
+      
+      <!-- 社交媒体 -->
+      <div class="category">
+        <h2>社交媒体</h2>
+        <div class="links">
+          <a href="https://www.instagram.com/" class="link-item" target="_blank"><i class="fab fa-instagram"></i>Instagram</a>
+          <a href="https://x.com/home" class="link-item" target="_blank"><i class="fab fa-twitter"></i>X</a>
+          <a href="https://www.facebook.com/" class="link-item" target="_blank"><i class="fab fa-facebook"></i>Facebook</a>
+          <a href="https://www.tiktok.com/explore" class="link-item" target="_blank"><i class="fab fa-tiktok"></i>TikTok</a>
+          <a href="https://www.douyin.com/?_enter_from=new_home_page&recommend=1" class="link-item" target="_blank"><i class="fas fa-music"></i>抖音</a>
+          <a href="https://www.bilibili.com/?_enter_from=new_home_page" class="link-item" target="_blank"><i class="fas fa-play-circle"></i>B站</a>
+          <a href="https://passport.weibo.com/sso/signin?entry=miniblog&source=miniblog&url=https://weibo.com/241410969/home?wvr=5" class="link-item" target="_blank"><i class="fab fa-weibo"></i>微博</a>
+          <a href="https://mp.weixin.qq.com/cgi-bin/home?t=home/index&token=2013717672&lang=zh_CN" class="link-item" target="_blank"><i class="fab fa-weixin"></i>公众号</a>
+        </div>
+      </div>
+      
+      <!-- 视频娱乐 -->
+      <div class="category">
+        <h2>视频娱乐</h2>
+        <div class="links">
+          <a href="https://www.youtube.com/" class="link-item" target="_blank"><i class="fab fa-youtube"></i>YouTube</a>
+          <a href="https://open.spotify.com/?flow_ctx=7bb29265-252d-42d2-a758-98dda5ba78e1:1718057339&creation_point=https://open.spotify.com/?sp_cid=fa4926b90a09aa197b37550680251d6d" class="link-item" target="_blank"><i class="fab fa-spotify"></i>Spotify</a>
+          <a href="https://www.hao6v.tv/" class="link-item" target="_blank"><i class="fas fa-film"></i>6V电影</a>
+          <a href="https://kqzb131.com/" class="link-item" target="_blank"><i class="fas fa-futbol"></i>看球直播</a>
+          <a href="https://www.miguvideo.com/p/channel/b1c29dcd91f94a0289bf6295140f43b2" class="link-item" target="_blank"><i class="fas fa-play"></i>咪咕视频</a>
+        </div>
+      </div>
+      
+      <!-- 效率工具 -->
+      <div class="category">
+        <h2>效率工具</h2>
+        <div class="links">
+          <a href="https://github.com/" class="link-item" target="_blank"><i class="fab fa-github"></i>GitHub</a>
+          <a href="https://bolt.new/" class="link-item" target="_blank"><i class="fas fa-bolt"></i>Bolt</a>
+          <a href="https://www.neat-reader.cn/webapp#/" class="link-item" target="_blank"><i class="fas fa-book-reader"></i>NeatReader</a>
+          <a href="https://dida365.com/webapp/#q/all/kanban" class="link-item" target="_blank"><i class="fas fa-check-square"></i>滴答清单</a>
+          <a href="https://static.app.yinxiang.com/verse/login" class="link-item" target="_blank"><i class="fas fa-pen"></i>Verse</a>
+          <a href="https://v.flomoapp.com/login" class="link-item" target="_blank"><i class="fas fa-sticky-note"></i>Flomo</a>
+          <a href="https://www.kdocs.cn/latest" class="link-item" target="_blank"><i class="fas fa-file"></i>金山文档</a>
+          <a href="https://docs.qq.com/desktop/?u=aa3648dcb1b84319a3a02507303d64d1&nlc=1" class="link-item" target="_blank"><i class="fas fa-file-alt"></i>腾讯文档</a>
+          <a href="https://i.mi.com/" class="link-item" target="_blank"><i class="fas fa-cloud"></i>小米云服务</a>
+        </div>
+      </div>
+      
+      <!-- 数据分析 -->
+      <div class="category">
+        <h2>网络与分析</h2>
+        <div class="links">
+          <a href="https://www.xiaozhongjishu.com/" class="link-item" target="_blank"><i class="fas fa-tools"></i>小众技术工具库</a>
+          <a href="https://ipaddress.my/" class="link-item" target="_blank"><i class="fas fa-network-wired"></i>我的IP地址</a>
+          <a href="https://search.google.com/search-console/about" class="link-item" target="_blank"><i class="fas fa-search"></i>GSC</a>
+          <a href="https://analytics.google.com/analytics/web/#/provision/create" class="link-item" target="_blank"><i class="fas fa-chart-line"></i>GA</a>
+          <a href="https://shipfaster.org/" class="link-item" target="_blank"><i class="fas fa-rocket"></i>教练导航站</a>
+          <a href="https://whoismaking.money/zh#google_vignette" class="link-item" target="_blank"><i class="fas fa-money-bill-wave"></i>发现谁在赚钱</a>
+        </div>
+      </div>
+      
+      <!-- 游戏 -->
+      <div class="category">
+        <h2>游戏</h2>
+        <div class="links">
+          <a href="https://www.taptap.cn/" class="link-item" target="_blank"><i class="fas fa-gamepad"></i>TapTap</a>
+          <a href="https://www.9game.cn/" class="link-item" target="_blank"><i class="fas fa-dice"></i>九游</a>
+          <a href="https://gm.game-center.cn/user/login" class="link-item" target="_blank"><i class="fas fa-shield-alt"></i>守游网络</a>
+          <a href="https://xueqiu.com/?md5__1038=QqGxcDnDyiitnD05o4+rhKAK0KGQkCCWa4D" class="link-item" target="_blank"><i class="fas fa-chart-bar"></i>雪球</a>
+        </div>
+      </div>
+    </div>
+    
+    <footer>
+      <p>© 2025 网站导航 | 精心整理的实用网站导航</p>
+    </footer>
+  </div>
+  
+  <script>
+    function searchSites() {
+      const input = document.getElementById('search').value.toLowerCase();
+      const links = document.getElementsByClassName('link-item');
+      
+      for (let i = 0; i < links.length; i++) {
+        const linkText = links[i].textContent.toLowerCase();
+        
+        if (linkText.includes(input)) {
+          links[i].style.display = '';
+        } else {
+          links[i].style.display = 'none';
+        }
+      }
+      
+      // 隐藏空分类
+      const categories = document.getElementsByClassName('category');
+      for (let i = 0; i < categories.length; i++) {
+        const categoryLinks = categories[i].getElementsByClassName('link-item');
+        let allHidden = true;
+        
+        for (let j = 0; j < categoryLinks.length; j++) {
+          if (categoryLinks[j].style.display !== 'none') {
+            allHidden = false;
+            break;
+          }
+        }
+        
+        if (allHidden) {
+          categories[i].style.display = 'none';
+        } else {
+          categories[i].style.display = '';
+        }
+      }
+    }
+  </script>
+</body>
+</html>
